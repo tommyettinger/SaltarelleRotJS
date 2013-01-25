@@ -12,7 +12,7 @@ using System.Net;
 using System.Runtime.CompilerServices;
 using System.Xml;
 
-namespace RotJS {
+namespace ROT {
 
     /// <summary>
     /// The global jQuery object.
@@ -22,17 +22,14 @@ namespace RotJS {
     public static class ROT {
 
         [IntrinsicProperty]
+        [PreserveCase]
         public static int DEFAULT_WIDTH
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-            }
+            get { return 0; }
+            set {}
         }
         [IntrinsicProperty]
+        [PreserveCase]
         public static int DEFAULT_HEIGHT
         {
             get
@@ -45,6 +42,7 @@ namespace RotJS {
         }
 
         [IntrinsicProperty]
+        [PreserveCase]
         public static JsDictionary<string, int[][]> DIRS {
             get {
                 return null;
@@ -150,8 +148,66 @@ namespace RotJS {
         {
             return true;
         }
+        
+
+        [Imported]
+        public static class Text
+        {
+            [IntrinsicProperty]
+            [PreserveCase]
+            public static System.Text.RegularExpressions.Regex RE_Colors
+            {
+                get { return null; }
+                set { }
+            }
+            [IntrinsicProperty]
+            [PreserveCase]
+            public static int TYPE_TEXT
+            {
+                get { return 0; }
+                set { }
+            }
+            [IntrinsicProperty]
+            [PreserveCase]
+            public static int TYPE_NEWLINE
+            {
+                get { return 0; }
+                set { }
+            }
+            [IntrinsicProperty]
+            [PreserveCase]
+            public static int TYPE_FG
+            {
+                get { return 0; }
+                set { }
+            }
+            [IntrinsicProperty]
+            [PreserveCase]
+            public static int TYPE_BG
+            {
+                get { return 0; }
+                set { }
+            }
 
 
+            public static object measure(string str, int maxWidth)
+            {
+                return null;
+            }
+            public static object tokenize(string str, int maxWidth)
+            {
+                return null;
+            }
+            public static object _breakLines(object tokens, int maxWidth)
+            {
+                return null;
+            }
+            public static string _breakInsideToken(object tokens, int tokenIndex, int breakIndex, string removeBreakChar)
+            {
+                return null;
+            }
+
+        }
 
         //public static jQueryXmlHttpRequest Ajax(string url, jQueryAjaxOptions options) {
         //    return null;
