@@ -42,6 +42,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="RNG.cs" />
     <Compile Include="RotDisplay.cs" />
     <Compile Include="rot.cs" />
   </ItemGroup>
